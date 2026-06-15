@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Игорь & Ирина</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#fbf8f3; --text:#5f5a56; --sage:#bcc8b7; --rose:#e7d3cd; --gold:#b59a72;
+}
+*{box-sizing:border-box}
+body{
+margin:0;background:var(--bg);color:var(--text);
+font-family:Montserrat,sans-serif;overflow-x:hidden;
+}
+.flower{position:fixed;font-size:180px;opacity:.08;z-index:-1}
+.f1{top:-20px;left:-20px}.f2{top:0;right:-20px}.f3{bottom:-30px;left:-20px}.f4{bottom:-20px;right:-20px}
+.hero{
+min-height:100vh;
+display:flex;flex-direction:column;justify-content:center;align-items:center;
+text-align:center;padding:30px;
+background:linear-gradient(rgba(251,248,243,.95),rgba(251,248,243,.95)),
+radial-gradient(circle at top,#efe2dc,#fbf8f3);
+}
+.monogram{
+width:110px;height:110px;border:1px solid var(--gold);
+border-radius:50%;display:flex;align-items:center;justify-content:center;
+font-family:"Cormorant Garamond",serif;font-size:48px;color:var(--gold);
+margin-bottom:25px;
+}
+h1,h2{font-family:"Cormorant Garamond",serif;font-weight:500}
+h1{font-size:clamp(4rem,9vw,7rem);margin:0}
+h2{font-size:clamp(2.2rem,5vw,3.2rem)}
+.section{
+max-width:1000px;margin:auto;padding:90px 20px;
+opacity:0;transform:translateY(40px);transition:all .9s;
+}
+.visible{opacity:1;transform:none}
+.card{
+background:#fff;border-radius:28px;padding:32px;
+box-shadow:0 10px 35px rgba(0,0,0,.05);
+}
+.divider{
+width:120px;height:1px;background:var(--gold);
+margin:30px auto;
+}
+.timer{
+display:flex;gap:15px;flex-wrap:wrap;justify-content:center;margin-top:30px;
+}
+.timer div{
+background:#fff;padding:18px;border-radius:18px;min-width:90px;
+box-shadow:0 4px 15px rgba(0,0,0,.05)
+}
+.num{font-size:28px;font-weight:600}
+.timeline{position:relative;padding-left:40px}
+.timeline:before{
+content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:var(--sage)
+}
+.event{position:relative;padding:0 0 30px 30px}
+.event:before{
+content:"";position:absolute;left:-7px;top:8px;width:18px;height:18px;
+border-radius:50%;background:var(--sage)
+}
+.palette{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px
+}
+.swatch{
+background:#fff;border-radius:22px;padding:18px;text-align:center;
+box-shadow:0 4px 15px rgba(0,0,0,.05)
+}
+.circle{width:70px;height:70px;border-radius:50%;margin:auto auto 12px;border:1px solid #ddd}
+.btn{
+display:inline-block;padding:14px 24px;background:var(--gold);
+color:#fff;text-decoration:none;border-radius:14px
+}
+iframe{width:100%;height:420px;border:none;border-radius:24px;margin-top:20px}
+footer{text-align:center;padding:80px 20px}
+@media(max-width:768px){
+.section{padding:60px 16px}
+.card{padding:22px}
+iframe{height:260px}
+.monogram{width:90px;height:90px;font-size:40px}
+}
+</style>
+</head>
+<body>
+
+<div class="flower f1">🌿</div>
+<div class="flower f2">🌸</div>
+<div class="flower f3">🌿</div>
+<div class="flower f4">🌸</div>
+
+<section class="hero">
+<div class="monogram">И&I</div>
+<h1>Игорь & Ирина</h1>
+<p>30 июля 2026</p>
+<div class="divider"></div>
+<p>С любовью начинается всё</p>
+
+<div class="timer">
+<div><div class="num" id="days">0</div><small>дней</small></div>
+<div><div class="num" id="hours">0</div><small>часов</small></div>
+<div><div class="num" id="mins">0</div><small>минут</small></div>
+</div>
+</section>
+
+<section class="section">
+<h2 style="text-align:center">Дорогие родные и друзья!</h2>
+<div class="card" style="text-align:center">
+Мы будем счастливы разделить с вами один из самых важных дней нашей жизни.
+Спасибо, что будете рядом и станете частью нашей истории.
+</div>
+</section>
+
+<section class="section">
+<h2 style="text-align:center">Программа дня</h2>
+<div class="card timeline">
+<div class="event"><strong>13:00</strong><br>Церемония регистрации в ЗАГСе</div>
+<div class="event"><strong>16:00</strong><br>Сбор гостей в ресторане</div>
+<div class="event"><strong>17:00</strong><br>Праздничный банкет</div>
+<div class="event"><strong>23:00</strong><br>Завершение вечера</div>
+</div>
+</section>
+
+<section class="section">
+<h2 style="text-align:center">Место проведения</h2>
+<div class="card">
+<p><b>ЗАГС</b><br>Музейно-храмовый комплекс Вооружённых Сил РФ «Парк Патриот», Зал Торжеств</p>
+<p><b>Ресторан</b><br>«Внуково Вилладж», зал «Галлерея»<br>Москва, д. Картмазово, Киевская ул., 4</p>
+<a class="btn" href="https://yandex.ru/maps/?text=Внуково%20Вилладж%20Картмазово" target="_blank">Открыть маршрут</a>
+</div>
+<iframe src="https://maps.google.com/maps?q=%D0%92%D0%BD%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%20%D0%92%D0%B8%D0%BB%D0%BB%D0%B0%D0%B4%D0%B6&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<section class="section">
+<h2 style="text-align:center">Дресс-код</h2>
+<div class="palette">
+<div class="swatch"><div class="circle" style="background:#FAF7F2"></div>Молочный</div>
+<div class="swatch"><div class="circle" style="background:#EAD8D3"></div>Пудровый</div>
+<div class="swatch"><div class="circle" style="background:#D8B8B0"></div>Пыльная роза</div>
+<div class="swatch"><div class="circle" style="background:#BFC8B5"></div>Шалфейный</div>
+<div class="swatch"><div class="circle" style="background:#E8DDCC"></div>Бежевый</div>
+<div class="swatch"><div class="circle" style="background:#D8D8D8"></div>Светло-серый</div>
+</div>
+</section>
+
+<section class="section">
+<h2 style="text-align:center">Подтверждение присутствия</h2>
+<div class="card" style="text-align:center">
+После создания Google Формы просто вставьте ссылку вместо кнопки ниже.
+<br><br>
+<a href="#" class="btn">Подтвердить присутствие</a>
+</div>
+</section>
+
+<footer>
+<div class="divider"></div>
+<h2>До встречи на нашем празднике</h2>
+<p>С любовью, Игорь и Ирина ❤️</p>
+</footer>
+
+<script>
+const target=new Date("2026-07-30T00:00:00");
+function upd(){
+const d=target-new Date();
+if(d<0)return;
+document.getElementById("days").textContent=Math.floor(d/86400000);
+document.getElementById("hours").textContent=Math.floor((d/3600000)%24);
+document.getElementById("mins").textContent=Math.floor((d/60000)%60);
+}
+upd(); setInterval(upd,1000);
+
+const ob=new IntersectionObserver(es=>{
+es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
+},{threshold:.15});
+document.querySelectorAll('.section').forEach(x=>ob.observe(x));
+</script>
+</body></html>
