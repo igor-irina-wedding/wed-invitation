@@ -184,7 +184,6 @@
 
         /* По умолчанию скрыто (десктоп) */
 .timeline-vertical { display: none; }
-.tv-item { /* заглушка */ }
         
         /* ── Мобильная адаптация (все правки) ── */
         @media (max-width: 600px) {
@@ -215,50 +214,54 @@
             .palette-circle { width: 32px; height: 32px; }
 
             /* Таймлайн крупнее */
-           /* Скрываем SVG-кривую на мобильных */
+          /* Скрываем SVG-кривую на мобильных */
 .timeline-svg-container { display: none; }
 
-/* Показываем вертикальный список */
+/* Вертикальный таймлайн */
 .timeline-vertical {
     display: block;
+    position: relative;
+    padding-left: 30px;
+    margin: 30px 0 20px;
     text-align: left;
-    padding: 0 10px;
-    margin: 20px 0 10px;
 }
 
+/* Сплошная вертикальная линия */
+.timeline-vertical::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--gold-light);
+}
+
+/* Каждое событие */
 .tv-item {
     position: relative;
-    padding-left: 40px;
-    margin-bottom: 24px;
-    font-size: 1.1em;
-    line-height: 1.5;
+    margin-bottom: 28px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.tv-item.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
-/* Декоративная линия слева */
+/* Точка на линии */
 .tv-item::before {
     content: '';
     position: absolute;
-    left: 16px;
-    top: 8px;
-    bottom: -24px;
-    width: 2px;
-    background: var(--gold-light);
-    z-index: 0;
-}
-.tv-item:last-child::before { display: none; }
-
-/* Точка на линии */
-.tv-item::after {
-    content: '';
-    position: absolute;
-    left: 10px;
+    left: -21px;          /* 15px (линия) + 6px до центра точки */
     top: 12px;
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     border: 2px solid var(--terracotta);
     background: var(--cream);
-    z-index: 1;
+    z-index: 2;
 }
 
 .tv-time {
@@ -308,7 +311,15 @@
                 </div>
                 <div class="hero-date">30 июля 2026</div>
                 <p class="hero-subtitle">Приглашение на свадьбу</p>
-                <div class="hero-names-cursive">Игорь и Ирина</div>
+                <!-- Десктопная версия (одна строка) -->
+<div class="hero-names-cursive">Игорь и Ирина</div>
+
+<!-- Мобильная версия (три строки) -->
+<div class="hero-names-cursive-mobile">
+    Игорь
+    <span class="names-ampersand-mobile">И</span>
+    Ирина
+</div>
                 <div class="branch-divider" id="branch1">
                     <svg viewBox="0 0 300 40">
                         <path class="branch-path" d="M10,20 Q40,5 60,20 Q80,35 100,20 Q120,5 140,20 Q160,35 180,20 Q200,5 220,20 Q240,35 260,20 Q280,5 290,20"/>
@@ -547,6 +558,17 @@
         }, { rootMargin: '0px 0px -40px 0px', threshold: 0.1 });
         sections.forEach(s => observer.observe(s));
         branchDividers.forEach(d => observer.observe(d));
+        // Анимация вертикального таймлайна при прокрутке
+const tvItems = document.querySelectorAll('.tv-item');
+const tvObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.6 });
+
+tvItems.forEach(item => tvObserver.observe(item));
 
         function animateTimeline() {
             const curve = document.getElementById('timelineCurve');
