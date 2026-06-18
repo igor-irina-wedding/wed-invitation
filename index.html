@@ -114,17 +114,18 @@
         .calendar-dates span { display: flex; align-items: center; justify-content: center; height: 42px; width: 100%; position: relative; }
         .heart-date { position: relative; font-weight: 600; }
         .heart-date::before {
-            content: '♡';
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3.5em;
-            color: transparent;
-            -webkit-text-stroke: 0.5px var(--terracotta);   /* тонкая обводка */
-            text-stroke: 0.5px var(--terracotta);
-            z-index: 0;
-            line-height: 1;
-        }
+    content: '♡';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5em;
+    color: transparent;
+    -webkit-text-stroke: 0.5px var(--terracotta);
+    -webkit-text-fill-color: transparent;
+    z-index: 0;
+    line-height: 1;
+}
+
         .heart-date span { position: relative; z-index: 1; color: var(--dark); }
 
         /* Лепестки */
@@ -200,10 +201,10 @@
             .calendar-grid { max-width: 260px; }
             .calendar-dates span { height: 38px; }
             .heart-date::before {
-                font-size: 3em;
-                -webkit-text-stroke: 0.4px var(--terracotta);   /* ещё тоньше на мобильных */
-                text-stroke: 0.4px var(--terracotta);
-            }
+    font-size: 3em;
+    -webkit-text-stroke: 0.4px var(--terracotta);
+    -webkit-text-fill-color: transparent;
+}
             .countdown { flex-wrap: nowrap; gap: 8px; }
             .countdown-item { min-width: auto; padding: 10px 8px; }
             .countdown-number { font-size: 1.7em; }
@@ -318,8 +319,8 @@
                             <img class="location-photo" src="https://avatars.mds.yandex.net/i?id=dfbfdde04d8f95e89d8f9dbdccf902d6_l-5235971-images-thumbs&n=13" alt="Интерьер ЗАГСа" loading="lazy">
                         </div>
                         <div class="location-info">
-                            <div class="location-name">Центральный ЗАГС</div>
-                            <div class="location-address">ул. Тверская, 13 · Москва</div>
+                            <div class="location-name">ЗАГС</div>
+                            <div class="location-address">Музейно-храмовый комплекс Вооруженных Сил РФ “Парк Патриот”, Зал Торжеств</div>
                             <span class="location-time">🕐 13:00</span>
                             <div class="location-map-hint">📍 Нажмите, чтобы открыть в Яндекс.Картах</div>
                         </div>
@@ -330,8 +331,8 @@
                             <img class="location-photo" src="http://uploads2.stells.info/GIhOXk0R4unFhqHNGuKka1kq9yQ=/952x600/jpg/3/56/356cf540bb0f6caf9d454099c7a97b28.jpg" alt="Интерьер ресторана" loading="lazy">
                         </div>
                         <div class="location-info">
-                            <div class="location-name">Ресторан «Золотая Роща»</div>
-                            <div class="location-address">Рублёвское шоссе, 42 · Москва</div>
+                            <div class="location-name">Ресторан “Внуково Вилладж”, Зал “Галлерея”</div>
+                            <div class="location-address">Москва, д. Картмазово, Киевская ул., 4</div>
                             <span class="location-time">🕐 16:00</span>
                             <div class="location-map-hint">📍 Нажмите, чтобы открыть в Яндекс.Картах</div>
                         </div>
@@ -382,7 +383,7 @@
                 <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 1.1em;">
                     Пожалуйста, подтвердите ваше присутствие до <strong>13 июля</strong>
                 </p>
-                <a href="https://forms.yandex.ru/..." class="rsvp-btn" id="rsvpButton">Подтвердить участие</a>
+                <a href="https://forms.yandex.ru/u/6a3072f2eb61460e2c10f825" class="rsvp-btn" id="rsvpButton">Подтвердить участие</a>
             </div>
         </section>
 
