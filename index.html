@@ -20,11 +20,7 @@
             --warm-light: #ffd59e;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Cormorant Garamond', serif;
@@ -48,609 +44,179 @@
             z-index: 2;
         }
 
-        /* ── Параллакс-цветы ── */
+        /* Параллакс-цветы */
         .parallax-flower {
-            position: fixed;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.12;
-            transition: transform 0.1s linear;
-            will-change: transform;
+            position: fixed; pointer-events: none; z-index: 0;
+            opacity: 0.12; transition: transform 0.1s linear; will-change: transform;
         }
-        .parallax-flower-1 {
-            top: 5%; left: -8%;
-            width: 280px; height: 280px;
-            background: radial-gradient(ellipse at 40% 50%, #c67b5c 0%, transparent 70%),
-                        radial-gradient(ellipse at 60% 40%, #e8c9b0 0%, transparent 65%);
-            border-radius: 60% 40% 55% 45% / 50% 55% 45% 50%;
-            filter: blur(35px);
-        }
-        .parallax-flower-2 {
-            top: 35%; right: -10%;
-            width: 320px; height: 320px;
-            background: radial-gradient(ellipse at 50% 50%, #7a8b5e 0%, transparent 68%),
-                        radial-gradient(ellipse at 45% 55%, #a3b88a 0%, transparent 65%);
-            border-radius: 45% 55% 50% 50% / 55% 45% 50% 50%;
-            filter: blur(40px);
-        }
-        .parallax-flower-3 {
-            top: 65%; left: -6%;
-            width: 250px; height: 250px;
-            background: radial-gradient(ellipse at 50% 50%, #b8956a 0%, transparent 70%),
-                        radial-gradient(ellipse at 55% 45%, #d4c5a9 0%, transparent 60%);
-            border-radius: 50%;
-            filter: blur(30px);
-        }
-        .parallax-flower-4 {
-            top: 80%; right: -5%;
-            width: 200px; height: 200px;
-            background: radial-gradient(ellipse at 50% 50%, #c67b5c 0%, transparent 65%);
-            border-radius: 55% 45% 50% 50% / 45% 55% 50% 50%;
-            filter: blur(28px);
-        }
+        .parallax-flower-1 { top: 5%; left: -8%; width: 280px; height: 280px; background: radial-gradient(ellipse at 40% 50%, #c67b5c 0%, transparent 70%), radial-gradient(ellipse at 60% 40%, #e8c9b0 0%, transparent 65%); border-radius: 60% 40% 55% 45% / 50% 55% 45% 50%; filter: blur(35px); }
+        .parallax-flower-2 { top: 35%; right: -10%; width: 320px; height: 320px; background: radial-gradient(ellipse at 50% 50%, #7a8b5e 0%, transparent 68%), radial-gradient(ellipse at 45% 55%, #a3b88a 0%, transparent 65%); border-radius: 45% 55% 50% 50% / 55% 45% 50% 50%; filter: blur(40px); }
+        .parallax-flower-3 { top: 65%; left: -6%; width: 250px; height: 250px; background: radial-gradient(ellipse at 50% 50%, #b8956a 0%, transparent 70%), radial-gradient(ellipse at 55% 45%, #d4c5a9 0%, transparent 60%); border-radius: 50%; filter: blur(30px); }
+        .parallax-flower-4 { top: 80%; right: -5%; width: 200px; height: 200px; background: radial-gradient(ellipse at 50% 50%, #c67b5c 0%, transparent 65%); border-radius: 55% 45% 50% 50% / 45% 55% 50% 50%; filter: blur(28px); }
 
-        /* ── Веточки папоротника ── */
-        .fern-left, .fern-right {
-            position: absolute;
-            top: 50%; transform: translateY(-50%);
-            width: 120px; height: 200px;
-            opacity: 0.25;
-            pointer-events: none;
-            z-index: 0;
-        }
-        .fern-left {
-            left: -90px;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 200'%3E%3Cpath d='M90,10 Q70,30 80,60 Q60,50 50,80 Q35,65 40,100 Q20,90 30,130 Q10,120 25,160 Q5,150 15,190' stroke='%237a8b5e' fill='none' stroke-width='2' opacity='0.8'/%3E%3C/svg%3E") no-repeat center;
-            background-size: contain;
-        }
-        .fern-right {
-            right: -90px;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 200'%3E%3Cpath d='M10,10 Q30,30 20,60 Q40,50 50,80 Q65,65 60,100 Q80,90 70,130 Q90,120 75,160 Q95,150 85,190' stroke='%237a8b5e' fill='none' stroke-width='2' opacity='0.8'/%3E%3C/svg%3E") no-repeat center;
-            background-size: contain;
-        }
+        /* Веточки папоротника */
+        .fern-left, .fern-right { position: absolute; top: 50%; transform: translateY(-50%); width: 120px; height: 200px; opacity: 0.25; pointer-events: none; z-index: 0; }
+        .fern-left { left: -90px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 200'%3E%3Cpath d='M90,10 Q70,30 80,60 Q60,50 50,80 Q35,65 40,100 Q20,90 30,130 Q10,120 25,160 Q5,150 15,190' stroke='%237a8b5e' fill='none' stroke-width='2' opacity='0.8'/%3E%3C/svg%3E") no-repeat center; background-size: contain; }
+        .fern-right { right: -90px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 200'%3E%3Cpath d='M10,10 Q30,30 20,60 Q40,50 50,80 Q65,65 60,100 Q80,90 70,130 Q90,120 75,160 Q95,150 85,190' stroke='%237a8b5e' fill='none' stroke-width='2' opacity='0.8'/%3E%3C/svg%3E") no-repeat center; background-size: contain; }
 
-        /* ── Секции ── */
+        /* Секции */
         .section {
-            position: relative;
-            z-index: 1;
-            margin: 30px 0;
-            opacity: 0;
-            transform: translateY(50px);
+            position: relative; z-index: 1; margin: 30px 0;
+            opacity: 0; transform: translateY(50px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .section.visible { opacity: 1; transform: translateY(0); }
 
         .card {
-            background: rgba(250, 247, 240, 0.85);
-            backdrop-filter: blur(10px);
-            border-radius: 6px;
-            padding: 50px 40px;
-            text-align: center;
+            background: rgba(250,247,240,0.85); backdrop-filter: blur(10px);
+            border-radius: 6px; padding: 50px 40px; text-align: center;
             position: relative;
-            box-shadow: 0 10px 40px rgba(74, 59, 50, 0.08), 0 0 0 1px rgba(184, 149, 106, 0.15);
+            box-shadow: 0 10px 40px rgba(74,59,50,0.08), 0 0 0 1px rgba(184,149,106,0.15);
             background-image:
                 url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E"),
-                linear-gradient(180deg, rgba(250, 247, 240, 0.95), rgba(245, 239, 224, 0.95));
+                linear-gradient(180deg, rgba(250,247,240,0.95), rgba(245,239,224,0.95));
         }
 
-        /* ── Золотые ветви-разделители ── */
-        .branch-divider {
-            text-align: center;
-            margin: 35px auto;
-            height: 40px;
-            width: 100%;
-        }
-        .branch-divider svg {
-            display: block;
-            margin: 0 auto;
-            width: 100%;
-            max-width: 400px;
-            height: 40px;
-        }
-        .branch-divider .branch-path {
-            fill: none;
-            stroke: var(--gold);
-            stroke-width: 1.2;
-            stroke-dasharray: 500;
-            stroke-dashoffset: 500;
-            transition: stroke-dashoffset 1.5s ease;
-        }
-        .branch-divider.visible .branch-path {
-            stroke-dashoffset: 0;
-        }
-        .branch-dot {
-            fill: var(--terracotta);
-            opacity: 0;
-            transition: opacity 0.5s ease 0.8s;
-        }
-        .branch-divider.visible .branch-dot {
-            opacity: 1;
-        }
+        /* Золотые ветви */
+        .branch-divider { text-align: center; margin: 35px auto; height: 40px; width: 100%; }
+        .branch-divider svg { display: block; margin: 0 auto; width: 100%; max-width: 400px; height: 40px; }
+        .branch-divider .branch-path { fill: none; stroke: var(--gold); stroke-width: 1.2; stroke-dasharray: 500; stroke-dashoffset: 500; transition: stroke-dashoffset 1.5s ease; }
+        .branch-divider.visible .branch-path { stroke-dashoffset: 0; }
+        .branch-dot { fill: var(--terracotta); opacity: 0; transition: opacity 0.5s ease 0.8s; }
+        .branch-divider.visible .branch-dot { opacity: 1; }
 
-        /* ── Гирлянда ── */
-        .garland-divider {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin: 40px 0;
-            position: relative;
-            z-index: 1;
-        }
-        .garland-line {
-            position: absolute;
-            top: 50%; left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(to right, transparent, var(--gold-light), transparent);
-            z-index: -1;
-        }
-        .bulb {
-            width: 12px; height: 18px;
-            background: var(--warm-light);
-            border-radius: 50% 50% 40% 40%;
-            box-shadow: 0 0 15px var(--warm-light), 0 0 30px rgba(255, 213, 158, 0.6);
-            animation: glowBulb 2s ease-in-out infinite alternate;
-            position: relative;
-        }
-        .bulb::after {
-            content: '';
-            position: absolute;
-            top: -4px; left: 50%;
-            transform: translateX(-50%);
-            width: 4px; height: 4px;
-            background: #666;
-            border-radius: 50%;
-        }
-        .bulb:nth-child(2) { animation-delay: 0.3s; }
-        .bulb:nth-child(3) { animation-delay: 0.6s; }
-        .bulb:nth-child(4) { animation-delay: 0.9s; }
-        .bulb:nth-child(5) { animation-delay: 1.2s; }
-        .bulb:nth-child(6) { animation-delay: 1.5s; }
-        .bulb:nth-child(7) { animation-delay: 1.8s; }
+        /* Гирлянда */
+        .garland-divider { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 40px 0; position: relative; z-index: 1; }
+        .garland-line { position: absolute; top: 50%; left: 0; width: 100%; height: 2px; background: linear-gradient(to right, transparent, var(--gold-light), transparent); z-index: -1; }
+        .bulb { width: 12px; height: 18px; background: var(--warm-light); border-radius: 50% 50% 40% 40%; box-shadow: 0 0 15px var(--warm-light), 0 0 30px rgba(255,213,158,0.6); animation: glowBulb 2s ease-in-out infinite alternate; position: relative; }
+        .bulb::after { content: ''; position: absolute; top: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background: #666; border-radius: 50%; }
+        .bulb:nth-child(2) { animation-delay: 0.3s; } .bulb:nth-child(3) { animation-delay: 0.6s; } .bulb:nth-child(4) { animation-delay: 0.9s; } .bulb:nth-child(5) { animation-delay: 1.2s; } .bulb:nth-child(6) { animation-delay: 1.5s; } .bulb:nth-child(7) { animation-delay: 1.8s; }
+        @keyframes glowBulb { 0% { opacity: 0.5; transform: scale(0.9); box-shadow: 0 0 10px var(--warm-light); } 100% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 25px var(--warm-light), 0 0 40px rgba(255,200,100,0.8); } }
 
-        @keyframes glowBulb {
-            0% { opacity: 0.5; transform: scale(0.9); box-shadow: 0 0 10px var(--warm-light); }
-            100% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 25px var(--warm-light), 0 0 40px rgba(255, 200, 100, 0.8); }
-        }
+        /* Главная секция */
+        .hero-section { padding-top: 40px; }
+        .monogram { display: inline-flex; align-items: baseline; justify-content: center; gap: 0; color: var(--terracotta); position: relative; }
+        .monogram .letter { font-family: 'Great Vibes', cursive; font-size: 3em; text-shadow: 0 2px 10px rgba(198,123,92,0.15); }
+        .monogram .ampersand { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 2.2em; color: var(--terracotta); margin: 0 -6px; text-shadow: 0 2px 10px rgba(198,123,92,0.15); line-height: 1; }
+        .monogram::before, .monogram::after { content: '✿'; font-size: 0.4em; color: var(--olive); position: absolute; top: 50%; transform: translateY(-50%); opacity: 0.6; font-family: 'Cormorant Garamond', serif; }
+        .monogram::before { left: -35px; } .monogram::after { right: -35px; }
 
-        /* ── Главная секция ── */
-        .hero-section {
-            padding-top: 40px;
-        }
-        .monogram {
-            display: inline-flex;
-            align-items: baseline;
-            justify-content: center;
-            gap: 0;
-            color: var(--terracotta);
-            position: relative;
-        }
-        .monogram .letter {
-            font-family: 'Great Vibes', cursive;
-            font-size: 3em;
-            text-shadow: 0 2px 10px rgba(198, 123, 92, 0.15);
-        }
-        .monogram .ampersand {
-            font-family: 'Cormorant Garamond', serif;
-            font-style: italic;
-            font-size: 2.2em;
-            color: var(--terracotta);
-            margin: 0 -6px;
-            text-shadow: 0 2px 10px rgba(198, 123, 92, 0.15);
-            line-height: 1;
-        }
-        .monogram::before,
-        .monogram::after {
-            content: '✿';
-            font-size: 0.4em;
-            color: var(--olive);
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0.6;
-            font-family: 'Cormorant Garamond', serif;
-        }
-        .monogram::before { left: -35px; }
-        .monogram::after { right: -35px; }
+        .hero-date { font-family: 'Montserrat', sans-serif; font-size: 0.9em; letter-spacing: 3px; color: var(--terracotta); text-transform: uppercase; margin: 10px 0 5px; font-weight: 300; }
+        .hero-subtitle { font-family: 'Montserrat', sans-serif; font-weight: 200; letter-spacing: 5px; text-transform: uppercase; color: var(--olive); font-size: 0.85em; }
+        .hero-names-cursive { font-family: 'Great Vibes', cursive; font-size: 4em; color: var(--dark); letter-spacing: 3px; margin-top: 12px; text-shadow: 0 2px 8px rgba(74,59,50,0.1); white-space: nowrap; }
 
-        .hero-date {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9em;
-            letter-spacing: 3px;
-            color: var(--terracotta);
-            text-transform: uppercase;
-            margin: 10px 0 5px;
-            font-weight: 300;
-        }
-        .hero-subtitle {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 200;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            color: var(--olive);
-            font-size: 0.85em;
-        }
-        .hero-names-cursive {
-            font-family: 'Great Vibes', cursive;
-            font-size: 4em;
-            color: var(--dark);
-            letter-spacing: 3px;
-            margin-top: 12px;
-            text-shadow: 0 2px 8px rgba(74, 59, 50, 0.1);
-        }
-
-        /* ── Календарь ── */
-        .calendar-mini {
-            margin-top: 30px;
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-muted);
-        }
-        .calendar-month {
-            font-family: 'Great Vibes', cursive;
-            font-size: 2em;
-            color: var(--olive);
-            margin-bottom: 12px;
-        }
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 8px;
-            max-width: 300px;
-            margin: 0 auto;
-        }
-        .calendar-days {
-            font-size: 0.7em;
-            letter-spacing: 1.5px;
-            margin-bottom: 4px;
-        }
-        .calendar-dates {
-            font-size: 1.2em;
-            font-weight: 300;
-            color: var(--dark);
-        }
-        .calendar-dates span {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 42px;
-            width: 100%;
-            position: relative;
-        }
-        .heart-date {
-            position: relative;
-            font-weight: 600;
-        }
+        /* Календарь */
+        .calendar-mini { margin-top: 30px; font-family: 'Montserrat', sans-serif; color: var(--text-muted); }
+        .calendar-month { font-family: 'Great Vibes', cursive; font-size: 2em; color: var(--olive); margin-bottom: 12px; }
+        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; max-width: 300px; margin: 0 auto; }
+        .calendar-days { font-size: 0.7em; letter-spacing: 1.5px; margin-bottom: 4px; }
+        .calendar-dates { font-size: 1.2em; font-weight: 300; color: var(--dark); }
+        .calendar-dates span { display: flex; align-items: center; justify-content: center; height: 42px; width: 100%; position: relative; }
+        .heart-date { position: relative; font-weight: 600; }
         .heart-date::before {
             content: '♡';
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 3em;
-            color: var(--terracotta);
-            opacity: 0.65;
+            font-size: 3.5em;
+            color: transparent;
+            -webkit-text-stroke: 0.5px var(--terracotta);   /* тонкая обводка */
+            text-stroke: 0.5px var(--terracotta);
             z-index: 0;
-            font-weight: 300;
             line-height: 1;
         }
-        .heart-date span {
-            position: relative;
-            z-index: 1;
-            color: var(--dark);
-        }
+        .heart-date span { position: relative; z-index: 1; color: var(--dark); }
 
-        /* ── Лепестки ── */
-        .petals-container {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: 0;
-        }
-        .petal {
-            position: absolute;
-            top: -50px;
-            font-size: 20px;
-            animation: petalFall linear infinite;
-            opacity: 0.5;
-        }
-        @keyframes petalFall {
-            0% { transform: translateY(0) rotate(0deg) translateX(0); opacity: 0; }
-            5% { opacity: 0.5; }
-            90% { opacity: 0.4; }
-            100% { transform: translateY(110vh) rotate(540deg) translateX(80px); opacity: 0; }
-        }
+        /* Лепестки */
+        .petals-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+        .petal { position: absolute; top: -50px; font-size: 20px; animation: petalFall linear infinite; opacity: 0.5; }
+        @keyframes petalFall { 0% { transform: translateY(0) rotate(0deg) translateX(0); opacity: 0; } 5% { opacity: 0.5; } 90% { opacity: 0.4; } 100% { transform: translateY(110vh) rotate(540deg) translateX(80px); opacity: 0; } }
 
-        /* ── Таймлайн ── */
+        /* Таймлайн */
         .timeline-section { padding: 20px 0; }
-        .timeline-title {
-            font-size: 1.8em;
-            color: var(--dark);
-            margin-bottom: 30px;
-            letter-spacing: 1px;
-        }
-        .timeline-svg-container {
-            width: 100%;
-            max-width: 550px;
-            margin: 0 auto;
-        }
-        .timeline-svg {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .timeline-curve {
-            fill: none;
-            stroke: var(--gold-light);
-            stroke-width: 2.5;
-            stroke-dasharray: 1500;
-            stroke-dashoffset: 1500;
-            transition: stroke-dashoffset 1.5s ease; /* ускорено */
-        }
+        .timeline-title { font-size: 1.8em; color: var(--dark); margin-bottom: 30px; letter-spacing: 1px; }
+        .timeline-svg-container { width: 100%; max-width: 550px; margin: 0 auto; }
+        .timeline-svg { width: 100%; height: auto; display: block; }
+        .timeline-curve { fill: none; stroke: var(--gold-light); stroke-width: 2.5; stroke-dasharray: 1500; stroke-dashoffset: 1500; transition: stroke-dashoffset 1.5s ease; }
         .timeline-curve.animated { stroke-dashoffset: 0; }
-        .timeline-dot {
-            fill: var(--cream);
-            stroke: var(--terracotta);
-            stroke-width: 2.5;
-            opacity: 0;
-            transform: scale(0);
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+        .timeline-dot { fill: var(--cream); stroke: var(--terracotta); stroke-width: 2.5; opacity: 0; transform: scale(0); transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
         .timeline-dot.visible { opacity: 1; transform: scale(1); }
-        .timeline-label {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.75em;
-            fill: var(--text-muted);
-            letter-spacing: 1px;
-            opacity: 0;
-            transition: opacity 0.6s ease;
-        }
+        .timeline-label { font-family: 'Montserrat', sans-serif; font-size: 0.75em; fill: var(--text-muted); letter-spacing: 1px; opacity: 0; transition: opacity 0.6s ease; }
         .timeline-label.visible { opacity: 1; }
-        .timeline-time {
-            font-weight: 600;
-            fill: var(--dark);
-            font-size: 0.9em;
-        }
+        .timeline-time { font-weight: 600; fill: var(--dark); font-size: 0.9em; }
 
-        /* ── Локации ── */
+        /* Локации */
         .locations-section { padding: 20px 0; }
-        .locations-title {
-            font-size: 1.8em;
-            color: var(--dark);
-            margin-bottom: 30px;
-        }
-        .location-cards {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        .location-card {
-            position: relative;
-            background: rgba(250, 247, 240, 0.9);
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(74, 59, 50, 0.1);
-            transition: transform 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
+        .locations-title { font-size: 1.8em; color: var(--dark); margin-bottom: 30px; }
+        .location-cards { display: flex; flex-direction: column; gap: 30px; }
+        .location-card { position: relative; background: rgba(250,247,240,0.9); border-radius: 6px; overflow: hidden; box-shadow: 0 8px 30px rgba(74,59,50,0.1); transition: transform 0.3s ease; cursor: pointer; text-decoration: none; color: inherit; display: block; }
         .location-card:hover { transform: translateY(-3px); }
-        .location-photos {
-            display: flex;
-            height: 220px;
-            overflow: hidden;
-        }
-        .location-photo {
-            flex: 1;
-            object-fit: cover;
-            filter: sepia(0.15) brightness(0.95);
-        }
-        .location-photo:first-child {
-            clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
-        }
-        .location-photo:last-child {
-            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
-            margin-left: -10%;
-        }
-        .location-info {
-            padding: 25px 30px;
-            text-align: left;
-        }
-        .location-name {
-            font-size: 1.4em;
-            font-weight: 600;
-            color: var(--dark);
-        }
-        .location-address {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.75em;
-            color: var(--text-muted);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-top: 5px;
-        }
-        .location-time {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 6px 18px;
-            background: rgba(198, 123, 92, 0.1);
-            color: var(--terracotta);
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 600;
-        }
-        .location-map-hint {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.65em;
-            color: var(--gold);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-top: 8px;
-            opacity: 0.7;
-        }
+        .location-photos { display: flex; height: 220px; overflow: hidden; }
+        .location-photo { flex: 1; object-fit: cover; filter: sepia(0.15) brightness(0.95); }
+        .location-photo:first-child { clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%); }
+        .location-photo:last-child { clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%); margin-left: -10%; }
+        .location-info { padding: 25px 30px; text-align: left; }
+        .location-name { font-size: 1.4em; font-weight: 600; color: var(--dark); }
+        .location-address { font-family: 'Montserrat', sans-serif; font-size: 0.75em; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 5px; }
+        .location-time { display: inline-block; margin-top: 10px; padding: 6px 18px; background: rgba(198,123,92,0.1); color: var(--terracotta); border-radius: 20px; font-size: 0.9em; font-weight: 600; }
+        .location-map-hint { font-family: 'Montserrat', sans-serif; font-size: 0.65em; color: var(--gold); letter-spacing: 1px; text-transform: uppercase; margin-top: 8px; opacity: 0.7; }
 
-        /* ── Дресс-код и палитра ── */
-        .dress-code-section {
-            text-align: center;
-        }
-        .dress-code-text {
-            font-size: 1.2em;
-            color: var(--text-dark);
-            font-style: italic;
-            margin-bottom: 25px;
-            line-height: 1.7;
-        }
-        .palette {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .palette-circle {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-        .palette-circle:hover {
-            transform: scale(1.2);
-        }
+        /* Дресс-код */
+        .dress-code-section { text-align: center; }
+        .dress-code-text { font-size: 1.2em; color: var(--text-dark); font-style: italic; margin-bottom: 25px; line-height: 1.7; }
+        .palette { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+        .palette-circle { width: 40px; height: 40px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.08); transition: transform 0.3s; }
+        .palette-circle:hover { transform: scale(1.2); }
 
-        /* ── RSVP ── */
+        /* RSVP */
         .rsvp-section { text-align: center; padding-bottom: 30px; }
-        .rsvp-btn {
-            display: inline-block;
-            padding: 16px 50px;
-            background: var(--terracotta);
-            color: #fff;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.8em;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            text-decoration: none;
-            position: relative;
-            overflow: hidden;
-        }
-        .rsvp-btn::after {
-            content: '';
-            position: absolute;
-            top: 50%; left: 50%;
-            width: 0; height: 0;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50%;
-            transform: translate(-50%,-50%);
-            transition: width 0.6s, height 0.6s;
-        }
+        .rsvp-btn { display: inline-block; padding: 16px 50px; background: var(--terracotta); color: #fff; font-family: 'Montserrat', sans-serif; font-size: 0.8em; letter-spacing: 4px; text-transform: uppercase; border: none; border-radius: 3px; cursor: pointer; transition: all 0.4s ease; text-decoration: none; position: relative; overflow: hidden; }
+        .rsvp-btn::after { content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0; background: rgba(255,255,255,0.2); border-radius: 50%; transform: translate(-50%,-50%); transition: width 0.6s, height 0.6s; }
         .rsvp-btn:hover::after { width: 400px; height: 400px; }
-        .rsvp-btn:hover {
-            box-shadow: 0 10px 30px rgba(198,123,92,0.4);
-            transform: translateY(-2px);
-        }
+        .rsvp-btn:hover { box-shadow: 0 10px 30px rgba(198,123,92,0.4); transform: translateY(-2px); }
 
-        /* ── Таймер ── */
+        /* Таймер */
         .countdown-section { padding-bottom: 60px; }
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 25px;
-            flex-wrap: wrap;
-        }
-        .countdown-item {
-            background: rgba(255,255,255,0.5);
-            border-radius: 8px;
-            padding: 15px 18px;
-            min-width: 80px;
-        }
-        .countdown-number {
-            font-size: 2.4em;
-            font-weight: 700;
-            color: var(--terracotta);
-            display: block;
-            line-height: 1;
-        }
-        .countdown-label {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.65em;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-top: 6px;
-            display: block;
-        }
+        .countdown { display: flex; justify-content: center; gap: 20px; margin-top: 25px; flex-wrap: wrap; }
+        .countdown-item { background: rgba(255,255,255,0.5); border-radius: 8px; padding: 15px 18px; min-width: 80px; }
+        .countdown-number { font-size: 2.4em; font-weight: 700; color: var(--terracotta); display: block; line-height: 1; }
+        .countdown-label { font-family: 'Montserrat', sans-serif; font-size: 0.65em; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); margin-top: 6px; display: block; }
 
-        /* ── Мобильная адаптация (улучшена) ── */
+        /* ── Мобильная адаптация (все правки) ── */
         @media (max-width: 600px) {
-            .card {
-                padding: 35px 20px;
-                /* убираем дорогой backdrop-filter на мобильных */
-                backdrop-filter: none;
-                background: rgba(250, 247, 240, 0.92);
-            }
+            .card { padding: 35px 20px; backdrop-filter: none; background: rgba(250,247,240,0.92); }
             .monogram .letter { font-size: 2.4em; }
             .monogram .ampersand { font-size: 1.8em; margin: 0 -4px; }
-            .monogram::before { left: -28px; }
-            .monogram::after { right: -28px; }
-            .hero-names-cursive { font-size: 2.8em; }
-            .location-photos { height: 160px; }
+            .monogram::before { left: -28px; } .monogram::after { right: -28px; }
+            .hero-names-cursive { font-size: 2.6em; white-space: nowrap; }
+            .location-photos { height: 180px; }
+            .location-photo:last-child { display: none; }           /* скрываем второе фото */
+            .location-photo:first-child { clip-path: none; }        /* убираем скос */
             .location-info { padding: 18px 20px; }
             .location-name { font-size: 1.2em; }
-            .fern-left, .fern-right {
-                width: 70px; height: 140px;
-            }
-            .fern-left { left: -50px; }
-            .fern-right { right: -50px; }
+            .fern-left, .fern-right { width: 70px; height: 140px; }
+            .fern-left { left: -50px; } .fern-right { right: -50px; }
             .branch-divider svg { max-width: 280px; }
             .calendar-grid { max-width: 260px; }
             .calendar-dates span { height: 38px; }
-            .heart-date::before { font-size: 2.6em; }
-            .countdown { gap: 10px; }
-            .countdown-item { min-width: 65px; padding: 10px 12px; }
-            .countdown-number { font-size: 1.8em; }
+            .heart-date::before {
+                font-size: 3em;
+                -webkit-text-stroke: 0.4px var(--terracotta);   /* ещё тоньше на мобильных */
+                text-stroke: 0.4px var(--terracotta);
+            }
+            .countdown { flex-wrap: nowrap; gap: 8px; }
+            .countdown-item { min-width: auto; padding: 10px 8px; }
+            .countdown-number { font-size: 1.7em; }
             .palette { gap: 10px; }
             .palette-circle { width: 32px; height: 32px; }
 
             /* Таймлайн крупнее */
-            .timeline-svg-container {
-                max-width: 100%;
-            }
-            .timeline-svg {
-                /* Увеличиваем масштаб за счёт изменения viewBox? 
-                   Но viewBox задан в HTML. Проще увеличить шрифты и отступы.
-                   Переопределим метки */
-            }
-            .timeline-label {
-                font-size: 0.9em; /* было 0.75em */
-            }
-            .timeline-time {
-                font-size: 1em;
-            }
-            .timeline-dot {
-                r: 10; /* Нельзя изменить атрибут через CSS, но мы изменим в HTML ниже */
-            }
-            /* Заменим атрибуты r для точек через селектор, но проще задать в HTML размеры через CSS переменные или напрямую.
-               Я добавлю новые стили для точек на мобильных */
-            .timeline-svg .timeline-dot {
-                r: 10px; /* Не сработает, т.к. это атрибут. Сделаем через JavaScript или просто продублируем в HTML с размерами. 
-                   Обойдёмся увеличением stroke-width */
-                stroke-width: 3;
-            }
+            .timeline-svg-container { transform: scale(1.25); transform-origin: top center; margin-bottom: 30px; overflow: visible; }
+            .timeline-label { font-size: 1em; }
+            .timeline-time { font-size: 1.1em; }
+
             /* Отключаем параллакс на мобильных */
-            .parallax-flower {
-                display: none;
-            }
-            /* Снижаем количество лепестков (в JS) */
+            .parallax-flower { display: none; }
         }
     </style>
 </head>
@@ -663,35 +229,27 @@
     <div class="petals-container" id="petalsContainer"></div>
 
     <div class="container">
-        <!-- ═══ ГЛАВНАЯ ═══ -->
+        <!-- ГЛАВНАЯ -->
         <section class="section hero-section" id="section1">
             <div class="card">
-                <div class="fern-left"></div>
-                <div class="fern-right"></div>
+                <div class="fern-left"></div><div class="fern-right"></div>
                 <div class="monogram">
-                    <span class="letter">И</span>
-                    <span class="ampersand">&</span>
-                    <span class="letter">И</span>
+                    <span class="letter">И</span><span class="ampersand">&</span><span class="letter">И</span>
                 </div>
                 <div class="hero-date">30 июля 2026</div>
                 <p class="hero-subtitle">Приглашение на свадьбу</p>
                 <div class="hero-names-cursive">Игорь и Ирина</div>
-
                 <div class="branch-divider" id="branch1">
                     <svg viewBox="0 0 300 40">
                         <path class="branch-path" d="M10,20 Q40,5 60,20 Q80,35 100,20 Q120,5 140,20 Q160,35 180,20 Q200,5 220,20 Q240,35 260,20 Q280,5 290,20"/>
-                        <circle class="branch-dot" cx="60" cy="20" r="3"/>
-                        <circle class="branch-dot" cx="140" cy="20" r="3"/>
-                        <circle class="branch-dot" cx="220" cy="20" r="3"/>
+                        <circle class="branch-dot" cx="60" cy="20" r="3"/><circle class="branch-dot" cx="140" cy="20" r="3"/><circle class="branch-dot" cx="220" cy="20" r="3"/>
                     </svg>
                 </div>
-
                 <p style="font-size: 1.2em; color: var(--dark); font-style: italic; line-height: 1.7;">
                     Дорогие родные и близкие!<br>
                     Совсем скоро наступит один из самых важных дней в нашей жизни, и мы хотим разделить его вместе с вами!<br><br>
                     Будем рады видеть вас на нашей свадьбе!
                 </p>
-
                 <div class="calendar-mini">
                     <div class="calendar-month">Июль</div>
                     <div class="calendar-grid calendar-days">
@@ -709,40 +267,36 @@
         <div class="branch-divider" id="branch2">
             <svg viewBox="0 0 300 40">
                 <path class="branch-path" d="M10,20 Q40,30 70,15 Q100,0 130,20 Q160,40 190,20 Q220,0 250,20 Q270,30 290,15"/>
-                <circle class="branch-dot" cx="70" cy="15" r="3"/>
-                <circle class="branch-dot" cx="190" cy="20" r="3"/>
+                <circle class="branch-dot" cx="70" cy="15" r="3"/><circle class="branch-dot" cx="190" cy="20" r="3"/>
             </svg>
         </div>
 
-        <!-- ═══ ТАЙМЛАЙН (улучшен для мобильных) ═══ -->
+        <!-- ТАЙМЛАЙН -->
         <section class="section timeline-section" id="section2">
             <div class="card">
-                <div class="fern-left"></div>
-                <div class="fern-right"></div>
+                <div class="fern-left"></div><div class="fern-right"></div>
                 <h2 class="timeline-title">Расписание дня</h2>
                 <div class="timeline-svg-container">
                     <svg class="timeline-svg" viewBox="0 0 550 380" id="timelineSvg">
-                        <path class="timeline-curve" id="timelineCurve"
-                        d="M40,40 C120,40 100,120 180,140 C260,160 280,240 360,260 C440,280 420,340 500,340"/>
-                        <!-- Точки с увеличенным радиусом для мобильных через JavaScript или зададим class и в CSS r менять не получится, поэтому сделаем дубли с атрибутами r, но проще задать r=10 сразу, а на десктопе будет норм -->
-                        <circle class="timeline-dot" id="dot1" cx="40" cy="40" r="9"/>
-                        <text class="timeline-label timeline-time" id="label1a" x="40" y="22" text-anchor="middle">13:00</text>
-                        <text class="timeline-label" id="label1b" x="40" y="72" text-anchor="middle">Церемония</text>
-                        <text class="timeline-label" id="label1c" x="40" y="88" text-anchor="middle" font-size="0.7em">в ЗАГСе</text>
+                        <path class="timeline-curve" id="timelineCurve" d="M40,40 C120,40 100,120 180,140 C260,160 280,240 360,260 C440,280 420,340 500,340"/>
+                        <circle class="timeline-dot" id="dot1" cx="40" cy="40" r="8"/>
+                        <text class="timeline-label timeline-time" id="label1a" x="40" y="25" text-anchor="middle">13:00</text>
+                        <text class="timeline-label" id="label1b" x="40" y="70" text-anchor="middle">Церемония</text>
+                        <text class="timeline-label" id="label1c" x="40" y="86" text-anchor="middle" font-size="0.65em">в ЗАГСе</text>
 
-                        <circle class="timeline-dot" id="dot2" cx="180" cy="140" r="9"/>
-                        <text class="timeline-label timeline-time" id="label2a" x="180" y="118" text-anchor="middle">16:00</text>
-                        <text class="timeline-label" id="label2b" x="180" y="172" text-anchor="middle">Сбор гостей</text>
-                        <text class="timeline-label" id="label2c" x="180" y="188" text-anchor="middle" font-size="0.7em">в ресторане</text>
+                        <circle class="timeline-dot" id="dot2" cx="180" cy="140" r="8"/>
+                        <text class="timeline-label timeline-time" id="label2a" x="180" y="120" text-anchor="middle">16:00</text>
+                        <text class="timeline-label" id="label2b" x="180" y="170" text-anchor="middle">Сбор гостей</text>
+                        <text class="timeline-label" id="label2c" x="180" y="186" text-anchor="middle" font-size="0.65em">в ресторане</text>
 
-                        <circle class="timeline-dot" id="dot3" cx="360" cy="260" r="9"/>
-                        <text class="timeline-label timeline-time" id="label3a" x="360" y="238" text-anchor="middle">17:00</text>
-                        <text class="timeline-label" id="label3b" x="360" y="292" text-anchor="middle">Праздничный</text>
-                        <text class="timeline-label" id="label3c" x="360" y="308" text-anchor="middle" font-size="0.7em">банкет</text>
+                        <circle class="timeline-dot" id="dot3" cx="360" cy="260" r="8"/>
+                        <text class="timeline-label timeline-time" id="label3a" x="360" y="240" text-anchor="middle">17:00</text>
+                        <text class="timeline-label" id="label3b" x="360" y="290" text-anchor="middle">Праздничный</text>
+                        <text class="timeline-label" id="label3c" x="360" y="306" text-anchor="middle" font-size="0.65em">банкет</text>
 
-                        <circle class="timeline-dot" id="dot4" cx="500" cy="340" r="9"/>
-                        <text class="timeline-label timeline-time" id="label4a" x="500" y="318" text-anchor="middle">23:00</text>
-                        <text class="timeline-label" id="label4b" x="500" y="334" text-anchor="middle" font-size="0.7em">Завершение</text>
+                        <circle class="timeline-dot" id="dot4" cx="500" cy="340" r="8"/>
+                        <text class="timeline-label timeline-time" id="label4a" x="500" y="362" text-anchor="middle">23:00</text>
+                        <text class="timeline-label" id="label4b" x="500" y="378" text-anchor="middle" font-size="0.65em">Завершение</text>
                     </svg>
                 </div>
             </div>
@@ -750,12 +304,10 @@
 
         <div class="garland-divider">
             <div class="garland-line"></div>
-            <div class="bulb"></div><div class="bulb"></div><div class="bulb"></div>
-            <div class="bulb"></div><div class="bulb"></div><div class="bulb"></div>
-            <div class="bulb"></div>
+            <div class="bulb"></div><div class="bulb"></div><div class="bulb"></div><div class="bulb"></div><div class="bulb"></div><div class="bulb"></div><div class="bulb"></div>
         </div>
 
-        <!-- ═══ ЛОКАЦИИ ═══ -->
+        <!-- ЛОКАЦИИ -->
         <section class="section locations-section" id="section3">
             <div class="card">
                 <h2 class="locations-title">Локации</h2>
@@ -791,12 +343,11 @@
         <div class="branch-divider" id="branch4">
             <svg viewBox="0 0 300 40">
                 <path class="branch-path" d="M10,15 Q60,30 110,10 Q160,-10 210,20 Q240,35 290,15"/>
-                <circle class="branch-dot" cx="110" cy="10" r="3"/>
-                <circle class="branch-dot" cx="210" cy="20" r="3"/>
+                <circle class="branch-dot" cx="110" cy="10" r="3"/><circle class="branch-dot" cx="210" cy="20" r="3"/>
             </svg>
         </div>
 
-        <!-- ═══ ДРЕСС-КОД ═══ -->
+        <!-- ДРЕСС-КОД -->
         <section class="section dress-code-section" id="section4">
             <div class="card">
                 <h2 class="timeline-title">Дресс-код</h2>
@@ -820,13 +371,11 @@
         <div class="branch-divider" id="branch5">
             <svg viewBox="0 0 300 40">
                 <path class="branch-path" d="M10,25 Q40,5 80,25 Q120,45 160,20 Q200,-5 240,22 Q270,35 290,18"/>
-                <circle class="branch-dot" cx="80" cy="25" r="3"/>
-                <circle class="branch-dot" cx="160" cy="20" r="3"/>
-                <circle class="branch-dot" cx="240" cy="22" r="3"/>
+                <circle class="branch-dot" cx="80" cy="25" r="3"/><circle class="branch-dot" cx="160" cy="20" r="3"/><circle class="branch-dot" cx="240" cy="22" r="3"/>
             </svg>
         </div>
 
-        <!-- ═══ RSVP ═══ -->
+        <!-- RSVP -->
         <section class="section rsvp-section" id="section5">
             <div class="card">
                 <h2 class="timeline-title">Будем ждать!</h2>
@@ -837,7 +386,7 @@
             </div>
         </section>
 
-        <!-- ═══ ТАЙМЕР ═══ -->
+        <!-- ТАЙМЕР -->
         <section class="section countdown-section" id="section6">
             <div class="card">
                 <h2 class="timeline-title">До встречи на празднике через…</h2>
@@ -872,15 +421,14 @@
                 const x = (e.clientX / window.innerWidth - 0.5) * 20;
                 const y = (e.clientY / window.innerHeight - 0.5) * 20;
                 parallaxFlowers.forEach((flower, i) => {
-                    const speed = (i + 1) * 0.6;
-                    flower.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+                    flower.style.transform = `translate(${x * (i+1) * 0.6}px, ${y * (i+1) * 0.6}px)`;
                 });
             });
         }
 
-        // Лепестки (уменьшено количество и частота на мобильных)
+        // Лепестки
         const petalsContainer = document.getElementById('petalsContainer');
-        const petalEmojis = ['🌸', '💮', '🌺', '🌷', '✿', '🌼', '🍂', '🌿'];
+        const petalEmojis = ['🌸','💮','🌺','🌷','✿','🌼','🍂','🌿'];
         function createPetal() {
             const petal = document.createElement('span');
             petal.classList.add('petal');
@@ -891,15 +439,13 @@
             petal.style.animationDelay = Math.random() * 5 + 's';
             petal.style.opacity = Math.random() * 0.3 + 0.15;
             petalsContainer.appendChild(petal);
-            setTimeout(() => { petal.remove(); }, 15000);
+            setTimeout(() => petal.remove(), 15000);
         }
-
-        const petalInterval = isMobile ? 5000 : 3000; // реже на телефонах
-        const initialPetals = isMobile ? 5 : 12;
-        for (let i = 0; i < initialPetals; i++) setTimeout(createPetal, i * 800);
+        const petalInterval = isMobile ? 5000 : 3000;
+        for (let i = 0; i < (isMobile ? 5 : 12); i++) setTimeout(createPetal, i * 800);
         setInterval(createPetal, petalInterval);
 
-        // Появление секций (раннее срабатывание)
+        // Появление секций
         const sections = document.querySelectorAll('.section');
         const branchDividers = document.querySelectorAll('.branch-divider');
         const observer = new IntersectionObserver((entries) => {
@@ -910,7 +456,6 @@
                 }
             });
         }, { rootMargin: '0px 0px -40px 0px', threshold: 0.1 });
-
         sections.forEach(s => observer.observe(s));
         branchDividers.forEach(d => observer.observe(d));
 
@@ -925,26 +470,23 @@
             }
         }
 
-        // Таймер обратного отсчёта
+        // Таймер
         function updateCountdown() {
             const weddingDate = new Date('2026-07-30T00:00:00').getTime();
             const now = new Date().getTime();
             const distance = weddingDate - now;
             if (distance < 0) {
-                document.getElementById('days').textContent = '00';
-                document.getElementById('hours').textContent = '00';
-                document.getElementById('minutes').textContent = '00';
-                document.getElementById('seconds').textContent = '00';
+                ['days','hours','minutes','seconds'].forEach(id => document.getElementById(id).textContent = '00');
                 return;
             }
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            document.getElementById('days').textContent = days.toString().padStart(2, '0');
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
         }
         setInterval(updateCountdown, 1000);
         updateCountdown();
