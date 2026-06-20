@@ -26,10 +26,12 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
 html, body {
-            color-scheme: light only;
-            forced-color-adjust: none;
-            -webkit-text-size-adjust: 100%;
-        }
+    color-scheme: light only;
+    forced-color-adjust: none;
+    -webkit-text-size-adjust: 100%;
+    -webkit-color-scheme: light only;          /* специально для Samsung */
+    -samsung-color-scheme: light only;         /* ещё один для Samsung */
+}
 
         img, video, canvas, svg {
             -webkit-filter: none !important;
@@ -635,6 +637,14 @@ html, body {
         }
         setInterval(updateCountdown, 1000);
         updateCountdown();
+        
+ // Принудительно светлая тема для Samsung
+        if (window.matchMedia) {
+            const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            darkModeQuery.addEventListener('change', () => {
+                document.documentElement.style.setProperty('color-scheme', 'light only');
+            });
+        }  
     </script>
 </body>
 </html>
